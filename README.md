@@ -2,10 +2,10 @@
 
 - [x] Crea un nuevo proyecto React.
 
-- [ ] Piense en cómo estructurar su aplicación en componentes. Su solicitud debe incluir:
-  - [ ] Una sección para agregar información general como nombre, correo electrónico y número de teléfono.
-  - [ ] Una sección para agregar su experiencia educativa (nombre de la escuela, título de estudio y fecha de estudio)
-  - [ ] Una sección para agregar experiencia práctica (nombre de la empresa, título del puesto, responsabilidades principales de sus trabajos, fecha y hasta cuando trabajó para esa empresa)
+- [x] Piense en cómo estructurar su aplicación en componentes. Su solicitud debe incluir:
+  - [x] Una sección para agregar información general como nombre, correo electrónico y número de teléfono.
+  - [x] Una sección para agregar su experiencia educativa (nombre de la escuela, título de estudio y fecha de estudio)
+  - [x] Una sección para agregar experiencia práctica (nombre de la empresa, título del puesto, responsabilidades principales de sus trabajos, fecha y hasta cuando trabajó para esa empresa)
 
 - [ ] Asegúrese de incluir un botón de editar y enviar para cada sección o para todo el CV.
   - [ ] El botón Enviar debe enviar su formulario y mostrar el valor de sus campos de entrada en elementos HTML.
