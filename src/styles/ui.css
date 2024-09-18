@@ -1,0 +1,54 @@
+/* Nav Section */
+.nav {
+  max-width: 878px;
+  max-height: 72px;
+  border-radius: 50px;
+  border: 1px solid #EFEFEF;
+}
+
+.navSection ul {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  list-style: none;
+  gap: 1rem;
+}
+
+/* InputText */
+.inputText {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+/* Boton */
+.botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 6px 16px;
+  margin: 1rem;
+  color: var(--btnText);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-borrar {
+  background-color: var(--btnRed);
+}
+
+.btn-visualizar {
+  background-color: var(--btnGray);
+}
+
+.btn-ejemplo {
+  background-color: var(--btnGreen);
+}

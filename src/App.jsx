@@ -1,15 +1,20 @@
-import Footer from './components/Footer'
-import Header from './components/Header'
-import NavSection from './components/ui/NavSection'
-function App() {
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Preview from "./components/Preview";
+import Secciones from "./components/Secciones";
 
+function App() {
+  
   return (
     <>
-    <Header/>
-    <NavSection />
-    <Footer />
+      <Header />
+      <main>
+        <Secciones />
+        <Preview />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

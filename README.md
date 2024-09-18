@@ -14,4 +14,4 @@
 
 - [ ] Crear un components directorio debajo de su src directorio y añade tus componentes.
 
-- [ ] Incluir a styles directorio debajo de su src directorio para sus archivos CSS. Deberá importarlos en los archivos de componentes para usarlos.
+- [x] Incluir a styles directorio debajo de su src directorio para sus archivos CSS. Deberá importarlos en los archivos de componentes para usarlos.

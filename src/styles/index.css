@@ -1,3 +1,10 @@
+:root {
+  --btnRed: #F3480F;
+  --btnGreen: #0CF42B;
+  --btnGray: #AFAFB2;
+  --btnText: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +16,14 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
+
+main {
+  margin-top: 2rem;
+  display: flex;
+}
+
+
 
 footer {
   display: flex;
@@ -28,24 +43,4 @@ footer {
 
 .footer-redes i {
   font-size: 2rem;
-}
-
-/* Nav SECTION */
-nav {
-  max-width: 878px;
-  max-height: 72px;
-  border-radius: 50px;
-  border: 1px solid  #EFEFEF;
-}
-
-ul {
-  display: flex;
-  margin: 1rem;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  /* background-color: #C4C4C4; */
-}
-ul {
-  list-style: none;
 }

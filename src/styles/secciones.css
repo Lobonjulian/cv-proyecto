@@ -1,0 +1,26 @@
+.section {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.seccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  border: 1px solid #efefef;
+}
+
+.seccion-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Perfil */
+/* .perfil-formulario {
+
+} */
