@@ -1,14 +1,14 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Preview from "./components/Preview";
-import Secciones from "./components/Secciones";
+import Editor from "./components/Editor";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <Secciones />
+        <Editor />
         <Preview />
       </main>
       <Footer />
