@@ -1,16 +1,13 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Preview from "./components/Preview";
-import Editor from "./components/Editor";
+import PropsApp from "./components/PropsApp";
+
 
 function App() {
   return (
     <>
       <Header />
-      <main>
-        <Editor />
-        <Preview />
-      </main>
+      <PropsApp />
       <Footer />
     </>
   );
