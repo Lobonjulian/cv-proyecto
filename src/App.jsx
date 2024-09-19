@@ -4,7 +4,6 @@ import Preview from "./components/Preview";
 import Secciones from "./components/Secciones";
 
 function App() {
-  
   return (
     <>
       <Header />

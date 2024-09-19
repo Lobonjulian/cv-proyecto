@@ -1,4 +1,5 @@
 import { ImFacebook, ImGithub, ImLinkedin2, ImTwitter } from "react-icons/im";
+import Logo from "./ui/Logo";
 
 const Footer = () => {
   const date = new Date().getFullYear();
@@ -6,11 +7,24 @@ const Footer = () => {
   return (
     <footer>
       <section className="footer-name">
-        <img src="../assets/Logo.svg" alt="elPoderDeCrear" className="logo" width="100px" />
-        <p>2024 - {date} a @Julitolos</p>
+       <Logo />
+        <p>
+          2023 - {date}{"  "}
+          <a
+            href="https://github.com/lobonjulian"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @Julitolos
+          </a>
+        </p>
       </section>
       <section className="footer-redes">
-        <a href="https://github" target="_blank">
+        <a
+          href="https://github.com/lobonjulian"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i>
             <ImGithub />
           </i>
@@ -20,12 +34,16 @@ const Footer = () => {
             <ImFacebook />
           </i>
         </a>
-        <a href="https://www.twitter.com" target="_blank">
+        <a href="https://www.twitter.com/julitolos" target="_blank">
           <i>
             <ImTwitter />
           </i>
         </a>
-        <a href="https://www.linkedin.com /" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/julian-aguilar-/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i>
             <ImLinkedin2 />
           </i>
