@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Information } from "../../utils/datos";
-import Editor from "./editor/Editor"
-import Preview from "./Preview"
-
+import Editor from "./editor/Editor";
+import Preview from "./Preview";
 
 const PropsApp = () => {
   const [nombres, setNombres] = useState(Information.nombres);
@@ -11,42 +10,42 @@ const PropsApp = () => {
   const [correo, setCorreo] = useState(Information.correo);
   const [telefono, setTelefono] = useState(Information.telefono);
   const [direction, setDirection] = useState(Information.direction);
-  
 
-const informationGeneral = {
-  nombres,
-  apellidos,
-  profesion,
-  correo,
-  telefono,
-  direction,
-}
+  const informationGeneral = {
+    nombres,
+    apellidos,
+    profesion,
+    correo,
+    telefono,
+    direction,
+  };
 
-// Manipulación de Eventos
-const manipularNombre = (newValor) => setNombres(newValor);
-const manipularApellido = (newValor) => setApellidos(newValor);
-const manipularProfesion = (newValor) => setProfesion(newValor);
-const manipularCorreo = (newValor) => setCorreo(newValor);
-const manipularTelefono = (newValor) => setTelefono(newValor);
-const manipularDirection = (newValor) => setDirection(newValor); 
+  // Manipulación de Eventos
+  const manipularNombre = (newValor) => setNombres(newValor);
+  const manipularApellido = (newValor) => setApellidos(newValor);
+  const manipularProfesion = (newValor) => setProfesion(newValor);
+  const manipularCorreo = (newValor) => setCorreo(newValor);
+  const manipularTelefono = (newValor) => setTelefono(newValor);
+  const manipularDirection = (newValor) => setDirection(newValor);
 
-const informationManipulada =
- {
-  manipularNombre,
-  manipularApellido,
-  manipularProfesion,
-  manipularCorreo,
-  manipularTelefono,
-  manipularDirection,
-}
-
+  const informationManipulada = {
+    manipularNombre,
+    manipularApellido,
+    manipularProfesion,
+    manipularCorreo,
+    manipularTelefono,
+    manipularDirection,
+  };
 
   return (
     <main>
-      <Editor informationGeneral={informationGeneral} informationManipulada={informationManipulada}/>
+      <Editor
+        informationGeneralEditor={informationGeneral}
+        informationManipuladaEditor={informationManipulada}
+      />
       <Preview />
     </main>
   );
-}
+};
 
 export default PropsApp;

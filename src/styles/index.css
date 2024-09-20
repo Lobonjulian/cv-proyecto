@@ -18,6 +18,9 @@ header {
   align-items: center;
 }
 
+a { 
+  text-decoration: none;
+}
 
 main {
   margin-top: 2rem;
@@ -40,7 +43,6 @@ footer {
   gap: 1.25rem;
   padding: 1.75rem;
   a { 
-    text-decoration: none;
     color: var(--black);
   }
 }

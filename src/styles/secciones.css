@@ -5,7 +5,7 @@
   border-radius: 1rem;
 }
 
-.seccion {
+.section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,12 +14,15 @@
   border: 1px solid #efefef;
 }
 
-.seccion-titulo {
+.section-titulo {
   font-size: 1.5rem;
   font-weight: bold;
   margin-top: 1rem;
+  
 }
-
+.section-titulo-h4 {
+  font-size: 1.2rem;
+}
 /* Perfil */
 /* .perfil-formulario {
 
