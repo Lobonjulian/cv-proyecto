@@ -181,11 +181,11 @@ const EditarFormulario = ({ index, datos, onSubmit, onEditar }) => {
       </label>
 
       <label>
-        <span>Institución:</span>
+        <span>Nombre o Grado:</span>
         <input
-          name="institution"
-          placeholder="Institution"
-          defaultValue={masDatos?.institution}
+          name="nombre"
+          placeholder="11"
+          defaultValue={masDatos?.nombre}
           required
         />
       </label>

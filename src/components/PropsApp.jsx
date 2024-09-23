@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Information } from "../../utils/datos";
 import Editor from "./editor/Editor";
-import Preview from "./Preview";
+import Preview from "./preview/Preview";
 
 const PropsApp = () => {
   const [nombres, setNombres] = useState(Information.nombres);
@@ -68,7 +68,7 @@ const PropsApp = () => {
         estilosDatosEditor={estilosDatos}
         estilosManejosEditor={estilosManejo}
       />
-      <Preview />
+      <Preview informationGeneralPreview={informationGeneral} educationPreview={education} experienciaPreview={experiencia} skillPreview={skill}/>
     </main>
   );
 };
