@@ -10,7 +10,9 @@ const PropsApp = () => {
   const [correo, setCorreo] = useState(Information.correo);
   const [telefono, setTelefono] = useState(Information.telefono);
   const [direction, setDirection] = useState(Information.direction);
-  const [descriptionLaboral, setDescriptionLaboral] = useState(Information.perfilLaboral);
+  const [descriptionLaboral, setDescriptionLaboral] = useState(
+    Information.perfilLaboral
+  );
   const [imgPerfil, setImgPerfil] = useState("/perfilCV.avif");
   const [education, setEducation] = useState(Information.education);
   const [experiencia, setExperiencia] = useState(Information.experiencia);
@@ -20,8 +22,8 @@ const PropsApp = () => {
   const [fuente, setFuente] = useState("serif");
 
   // Desestructuración y Manejo de los Estilos
-  const estilosDatos = [colorTexto, colorFondo, fuente] 
-  const estilosManejo = [setColorTexto, setColorFondo, setFuente]
+  const estilosDatos = [colorTexto, colorFondo, fuente];
+  const estilosManejo = [setColorTexto, setColorFondo, setFuente];
 
   const informationGeneral = {
     nombres,
@@ -58,7 +60,7 @@ const PropsApp = () => {
         informationGeneralEditor={informationGeneral}
         informationManipuladaEditor={informationManipulada}
         imgPerfilEditor={imgPerfil}
-        cambiarImgPerfilEditor={setImgPerfil} 
+        cambiarImgPerfilEditor={setImgPerfil}
         educationEditor={education}
         cambiarEducationEditor={setEducation}
         experienciaEditor={experiencia}
@@ -68,7 +70,13 @@ const PropsApp = () => {
         estilosDatosEditor={estilosDatos}
         estilosManejosEditor={estilosManejo}
       />
-      <Preview informationGeneralPreview={informationGeneral} educationPreview={education} experienciaPreview={experiencia} skillPreview={skill}/>
+      <Preview
+        informationGeneralPreview={informationGeneral}
+        imgPerfilPreview={imgPerfil}
+        educationPreview={education}
+        experienciaPreview={experiencia}
+        skillPreview={skill}
+      />
     </main>
   );
 };

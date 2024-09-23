@@ -1,7 +1,7 @@
 import { useState } from "react";
-import SecBotones from "../secciones/SecBotones";
 import NavSection from "../ui/NavSection";
 import EditorNavLinks from "./EditorNavLinks";
+import EditorBotones from "./EditorBotones";
 
 import "../../styles/secciones.css";
 
@@ -40,7 +40,7 @@ const Editor = ({
         estilosDatosNavLink={estilosDatosEditor}
         estilosManejosNavLink={estilosManejosEditor}
       />
-      <SecBotones />
+      <EditorBotones />
     </div>
   );
 };

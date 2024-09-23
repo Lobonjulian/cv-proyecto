@@ -1,0 +1,15 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-header {
+  flex-direction: row;
+}
+
+.preview-img {
+  height: 100%;
+  padding: 1rem;
+}

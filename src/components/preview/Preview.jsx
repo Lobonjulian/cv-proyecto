@@ -1,59 +1,62 @@
 import DatosPreview from "./DatosPreview";
 
-const Preview = ({ informationGeneralPreview, educationPreview, experienciaPreview, skillPreview }) => {
+import "../../styles/preview.css";
+
+const Preview = ({
+  informationGeneralPreview,
+  imgPerfilPreview,
+  educationPreview,
+  experienciaPreview,
+  skillPreview,
+}) => {
   return (
-    <div>
-      <header>
-        <div>
-          <img src="https://via.placeholder.com/150" alt="logo" />
+    <div className="preview">
+      <header className="preview preview-header">
+        <div className="preview preview-img">
+          <img src={imgPerfilPreview} alt="logo" />
         </div>
         <header>
-          <section>
-            <h2>
+          <section className="preview">
+            <h2 className="preview ">
               {informationGeneralPreview.nombres}{" "}
               {informationGeneralPreview.apellidos}
             </h2>
           </section>
-          <section>
-            <h3>Perfil Profesional</h3>
-            <p>{informationGeneralPreview.descriptionLaboral}</p>
+          <section className="preview">
+            <h3 className="preview">Perfil Profesional</h3>
+            <p className="preview">
+              {informationGeneralPreview.descriptionLaboral}
+            </p>
           </section>
-          <section>
-            <h4>contacto</h4>
-            <div>
-              <p>{informationGeneralPreview.telefono}</p>
-              <p>{informationGeneralPreview.correo}</p>
+          <section className="preview">
+            <h4 className="preview">contacto</h4>
+            <div className="preview">
+              <p className="preview">{informationGeneralPreview.telefono}</p>
+              <p className="preview">{informationGeneralPreview.correo}</p>
             </div>
-            <div>
-              <p>{informationGeneralPreview.direction}</p>
-              <p>{informationGeneralPreview.direction}</p>
+            <div className="preview">
+              <p className="preview">{informationGeneralPreview.direction}</p>
+              <p className="preview">{informationGeneralPreview.direction}</p>
             </div>
           </section>
         </header>
       </header>
 
-      <section>
-        <aside>lateral</aside>
-        <main>
-          <section>
-            <div>
-              {educationPreview.length !== 0 &&(
-               <DatosPreview
-                titulo="Educación"
-                datos={educationPreview}
-               />
+      <section className="preview">
+        <aside className="preview">lateral</aside>
+        <main className="preview">
+          <section className="preview">
+            <div className="preview">
+              {educationPreview.length !== 0 && (
+                <DatosPreview titulo="Educación" datos={educationPreview} />
               )}
-              {experienciaPreview.length !== 0 &&(
-               <DatosPreview
-                titulo="Experiencia"
-                datos={experienciaPreview}
-               />
+
+              {experienciaPreview.length !== 0 && (
+                <DatosPreview titulo="Experiencia" datos={experienciaPreview} />
               )}
-              {skillPreview.length !== 0 &&(
-               <DatosPreview
-                titulo="Skills"
-                datos={skillPreview}
-               />
+
+              {skillPreview.length !== 0 && (
+                <DatosPreview titulo="Skills" datos={skillPreview} />
               )}
             </div>
           </section>
