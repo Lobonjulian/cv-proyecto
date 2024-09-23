@@ -2,34 +2,58 @@ import Perfil from "../secciones/Perfil";
 import Imagen from "../secciones/Imagen";
 import Contenido from "../secciones/Contenido";
 import Configuration from "../secciones/Configuration";
+import { useState } from "react";
 
-const EditorNavLinks = ({linkActualNavLink, informationGeneralNavLink, informationManipuladaNavLink}) => {
+const EditorNavLinks = ({
+  linkActualNavLink,
+  informationGeneralNavLink,
+  informationManipuladaNavLink,
+  imgPerfilNavLink,
+  cambiarImgPerfilNavLink,
+  educationNavLink,
+  experienciaNavLink,
+  skillNavLink,
+  cambiarEducationNavLink,
+  cambiarExperienciaNavLink,
+  cambiarSkillNavLink,
+  estilosDatosNavLink,
+  estilosManejosNavLink,
+}) => {
+  const [aperturaAccordion, setAperturaAccordion] = useState(null);
+  const clausuraAccordion = (abrirSectionAccordion) => {
+    if (abrirSectionAccordion === aperturaAccordion) {
+      setAperturaAccordion(null);
+      return
+    }
+    setAperturaAccordion(abrirSectionAccordion);
+  }
 
- switch (linkActualNavLink) {
-  case 0: {
-   return (
-     <Perfil informationGeneralPerfil={informationGeneralNavLink} informationManipuladaPerfil={informationManipuladaNavLink}/>
-   )
+  switch (linkActualNavLink) {
+    case 0: {
+      return (
+        <Perfil
+          informationGeneralPerfil={informationGeneralNavLink}
+          informationManipuladaPerfil={informationManipuladaNavLink}
+        />
+      );
+    }
+    case 1: {
+      return (
+        <Imagen
+          imgPerfilImagen={imgPerfilNavLink}
+          cambiarImgPerfilImagen={cambiarImgPerfilNavLink}
+        />
+      );
+    }
+    case 2: {
+      return <Contenido education={educationNavLink} experiencia={experienciaNavLink} skill={skillNavLink} cambiarEducation={cambiarEducationNavLink} cambiarExperiencia={cambiarExperienciaNavLink} cambiarSkill={cambiarSkillNavLink} abrirAccordion={aperturaAccordion} cerrarAccordion={clausuraAccordion} />;
+    }
+    case 3: {
+      return <Configuration  estilosDatosConfig={estilosDatosNavLink} estilosManejosConfig={estilosManejosNavLink}/>;
+    }
+    default:
+      break;
   }
-  case 1: {
-    return (
-      <Imagen />
-    )
-  }
-  case 2: {
-    return (
-      <Contenido />
-    )
-  }
-  case 3: {
-    return (
-      <Configuration />
-    )
-  }
-  default:
-    break;
- }
-
-}
+};
 
 export default EditorNavLinks;

@@ -10,6 +10,18 @@ const PropsApp = () => {
   const [correo, setCorreo] = useState(Information.correo);
   const [telefono, setTelefono] = useState(Information.telefono);
   const [direction, setDirection] = useState(Information.direction);
+  const [descriptionLaboral, setDescriptionLaboral] = useState(Information.perfilLaboral);
+  const [imgPerfil, setImgPerfil] = useState("/perfilCV.avif");
+  const [education, setEducation] = useState(Information.education);
+  const [experiencia, setExperiencia] = useState(Information.experiencia);
+  const [skill, setSkill] = useState(Information.skill);
+  const [colorTexto, setColorTexto] = useState("#ffffff");
+  const [colorFondo, setColorFondo] = useState("#ffffff");
+  const [fuente, setFuente] = useState("serif");
+
+  // Desestructuración y Manejo de los Estilos
+  const estilosDatos = [colorTexto, colorFondo, fuente] 
+  const estilosManejo = [setColorTexto, setColorFondo, setFuente]
 
   const informationGeneral = {
     nombres,
@@ -18,6 +30,7 @@ const PropsApp = () => {
     correo,
     telefono,
     direction,
+    descriptionLaboral,
   };
 
   // Manipulación de Eventos
@@ -27,6 +40,7 @@ const PropsApp = () => {
   const manipularCorreo = (newValor) => setCorreo(newValor);
   const manipularTelefono = (newValor) => setTelefono(newValor);
   const manipularDirection = (newValor) => setDirection(newValor);
+  const manipularDescription = (newValor) => setDescriptionLaboral(newValor);
 
   const informationManipulada = {
     manipularNombre,
@@ -35,6 +49,7 @@ const PropsApp = () => {
     manipularCorreo,
     manipularTelefono,
     manipularDirection,
+    manipularDescription,
   };
 
   return (
@@ -42,6 +57,16 @@ const PropsApp = () => {
       <Editor
         informationGeneralEditor={informationGeneral}
         informationManipuladaEditor={informationManipulada}
+        imgPerfilEditor={imgPerfil}
+        cambiarImgPerfilEditor={setImgPerfil} 
+        educationEditor={education}
+        cambiarEducationEditor={setEducation}
+        experienciaEditor={experiencia}
+        cambiarExperienciaEditor={setExperiencia}
+        skillEditor={skill}
+        cambiarSkillEditor={setSkill}
+        estilosDatosEditor={estilosDatos}
+        estilosManejosEditor={estilosManejo}
       />
       <Preview />
     </main>

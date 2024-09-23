@@ -1,12 +1,9 @@
-import { useState } from "react";
 import "../../styles/secciones.css";
 import { RiFontMono, RiFontSans, RiFontSansSerif } from "react-icons/ri";
 
-const Configuration = ({
-  cambioFuentesConfig,
-}) => {
-  const [colorTexto, setColorTexto] = useState("#ffffff");
-  const [colorFondo, setColorFondo] = useState("#ffffff");
+const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
+  const [colorTexto, colorFondo] = estilosDatosConfig
+  const [setColorTexto, setColorFondo, setFuente] = estilosManejosConfig 
 
   return (
     <div className="section">
@@ -35,19 +32,19 @@ const Configuration = ({
       <section className="section">
         <h4 className="section-titulo section-titulo-h4">Fuente</h4>
         <div>
-          <button onClick={() => cambioFuentesConfig("Open Sans")}>
+          <button onClick={() => setFuente("Open Sans")}>
             <span>
               <RiFontMono />
             </span>
             <span>Mono</span>
           </button>
-          <button onClick={() => cambioFuentesConfig("Open Sans")}>
+          <button onClick={() => setFuente("Open Sans")}>
             <span>
               <RiFontSans />
             </span>
             <span>Sans</span>
           </button>
-          <button onClick={() => cambioFuentesConfig("Open Sans")}>
+          <button onClick={() => setFuente("Open Sans")}>
             <span>
               <RiFontSansSerif />
             </span>

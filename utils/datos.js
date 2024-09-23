@@ -7,6 +7,8 @@ export const Information = {
   correo: "example@example.com",
   telefono: 3003003003,
   direction: "Calle 1 # 1-1",
+  perfilLaboral: "Hola soy desarrollador web, mi perfil laboral incluye habilidades en programación en lenguajes como HTML, CSS, JavaScript y frameworks como React. Tengo experiencia en el desarrollo de aplicaciones web y en la creación de sitios web responsivos y escalables. Además, tengo conocimientos en bases de datos y en la integración de APIs.Estoy comprometido con escribir código limpio y eficiente, y siempre busco mejorar mis habilidades y aprender nuevas tecnologías.",
+  imagenPerfil: "/perfilCV.avif",
 
   education: [
     {
