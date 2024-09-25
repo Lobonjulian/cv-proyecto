@@ -17,8 +17,8 @@ const PropsApp = () => {
   const [education, setEducation] = useState(Information.education);
   const [experiencia, setExperiencia] = useState(Information.experiencia);
   const [skill, setSkill] = useState(Information.skill);
-  const [colorTexto, setColorTexto] = useState("#ffffff");
-  const [colorFondo, setColorFondo] = useState("#ffffff");
+  const [colorTexto, setColorTexto] = useState("#3D3D3D");
+  const [colorFondo, setColorFondo] = useState("#AFAFB2");
   const [fuente, setFuente] = useState("serif");
 
   // Desestructuración y Manejo de los Estilos

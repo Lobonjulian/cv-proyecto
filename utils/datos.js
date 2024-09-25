@@ -14,23 +14,22 @@ export const Information = {
     {
       id: 1,
       institution: "Universidad Nacional",
-      titulo: "Ingeniería de Software",
+      nombre: "Ingeniería de Software",
       fechaInicio: "05-2022",
       fechaFinal: "12-2024",
-      description:
-        "titulo obtenido en la carrera de Ingeniería en Sistemas."
+      description: "Título obtenido en la carrera de Ingeniería en Sistemas, con énfasis en el desarrollo de software, metodologías ágiles y gestión de proyectos. Durante la carrera, adquirí habilidades en programación, diseño de bases de datos y análisis de sistemas, así como experiencia en proyectos prácticos y trabajo en equipo."
     },
   ],
 
   experiencia: [
     {
       id: 1,
-      nombreEmpresa: "Cagliostro S.A.",
-      puesto: "Cajero",
+      institution: "Cagliostro S.A.",
+      nombre: "Cajero",
       fechaInicio: "05-2022",
       fechaFinal: "12-2024",
       description:
-      "encargado de hacer realizar y planificar el desarrollo de paginas web.",
+      "Responsable de gestionar transacciones financieras y ofrecer un excelente servicio al cliente. Encargado de realizar y planificar el desarrollo de páginas web para mejorar la presencia digital de la empresa, colaborando con el equipo de marketing para optimizar la experiencia del usuario. Implementé sistemas de gestión de inventarios que aumentaron la eficiencia operativa en un 20%. Participé en la capacitación de nuevos empleados y en la resolución de conflictos, manteniendo un ambiente de trabajo positivo.",
     },
   ],
 

@@ -1,17 +1,19 @@
 const DatosPreview = ({ titulo, datos }) => {
   return (
-    <section className="preview">
-      <h4 className="preview">{titulo}</h4>
-      <ul className="preview">
+    <section className="datos">
+      <h4 className="">{titulo}</h4>
+      <ul className="datos-ul">
         {datos.map((unidadDatos) => {
           return (
             <li key={unidadDatos.id}>
-              <p className="preview">
-                {unidadDatos.fechaInicio} - {unidadDatos.fechaFinal}
+              <p className="">
+                <span className="badge">{unidadDatos.fechaInicio}</span><span className="badge badge-final">{unidadDatos.fechaFinal}</span>
               </p>
-              <h4 className="preview">{unidadDatos.institution}</h4>
-              <h5 className="preview">{unidadDatos.nombre}</h5>
-              <p className="preview">{unidadDatos.description}</p>
+              <div className="datos-div">
+              <h5 className="">{unidadDatos.institution}</h5>
+              <h6 className="">{unidadDatos.nombre}</h6>
+              </div>
+              <p className="">{unidadDatos.description}</p>
             </li>
           );
         })}

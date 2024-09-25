@@ -1,6 +1,12 @@
 import DatosPreview from "./DatosPreview";
 
 import "../../styles/preview.css";
+import {
+  MdLanguage,
+  MdMarkunread,
+  MdOutlinePhonelinkRing,
+  MdPinDrop,
+} from "react-icons/md";
 
 const Preview = ({
   informationGeneralPreview,
@@ -12,41 +18,68 @@ const Preview = ({
   return (
     <div className="preview">
       <header className="preview preview-header">
-        <div className="preview preview-img">
+        <div className="preview preview-img triangulo">
           <img src={imgPerfilPreview} alt="logo" />
         </div>
-        <header>
-          <section className="preview">
-            <h2 className="preview ">
+
+        <header className="preview-section header-nombres ">
+          <section className="preview preview-header-header-section">
+            <h2 className="preview">
               {informationGeneralPreview.nombres}{" "}
               {informationGeneralPreview.apellidos}
             </h2>
           </section>
-          <section className="preview">
-            <h3 className="preview">Perfil Profesional</h3>
-            <p className="preview">
-              {informationGeneralPreview.descriptionLaboral}
-            </p>
+
+          <section className="header-bio">
+            <h3 className="">Perfil Profesional</h3>
+            <p className="">{informationGeneralPreview.descriptionLaboral}</p>
           </section>
-          <section className="preview">
-            <h4 className="preview">contacto</h4>
-            <div className="preview">
-              <p className="preview">{informationGeneralPreview.telefono}</p>
-              <p className="preview">{informationGeneralPreview.correo}</p>
-            </div>
-            <div className="preview">
-              <p className="preview">{informationGeneralPreview.direction}</p>
-              <p className="preview">{informationGeneralPreview.direction}</p>
+
+          <section className="header-contacto">
+            <span className="triangulo">
+              <h4 className="">contacto</h4>
+            </span>
+            <div className="header-contacto-div">
+              <div className="header-contacto-div">
+                <p className="">
+                  {" "}
+                  {<MdOutlinePhonelinkRing />}{" "}
+                  {informationGeneralPreview.telefono}
+                </p>
+                <p className="">
+                  {<MdMarkunread />} {informationGeneralPreview.correo}
+                </p>
+              </div>
+
+              <div className="header-contacto-div">
+                <p className="">
+                  {<MdLanguage />} {informationGeneralPreview.direction}
+                </p>
+                <p className="">
+                  {<MdPinDrop />} {informationGeneralPreview.direction}
+                </p>
+              </div>
             </div>
           </section>
         </header>
       </header>
 
-      <section className="preview">
-        <aside className="preview">lateral</aside>
-        <main className="preview">
-          <section className="preview">
-            <div className="preview">
+      <section className="preview-section">
+        <aside className="preview lateral">
+          {/* version preliminar*/}
+          {skillPreview.length !== 0 && (
+            <DatosPreview titulo="Habilidades" datos={skillPreview} />
+          )}
+          {skillPreview.length !== 0 && (
+            <DatosPreview titulo="Habilidades" datos={skillPreview} />
+          )}
+          {skillPreview.length !== 0 && (
+            <DatosPreview titulo="Habilidades" datos={skillPreview} />
+          )}
+        </aside>
+        <main className="main">
+          <section className="">
+            <div className="">
               {educationPreview.length !== 0 && (
                 <DatosPreview titulo="Educación" datos={educationPreview} />
               )}
@@ -56,7 +89,7 @@ const Preview = ({
               )}
 
               {skillPreview.length !== 0 && (
-                <DatosPreview titulo="Skills" datos={skillPreview} />
+                <DatosPreview titulo="Habilidades" datos={skillPreview} />
               )}
             </div>
           </section>

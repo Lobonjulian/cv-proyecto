@@ -23,7 +23,7 @@ const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperienci
         cerrarAccordion={cerrarAccordion}
       />
        <Accordion
-        titulo="Skill"
+        titulo="Habilidades"
         index={2}
         datos={skill}
         cambiarDatos={cambiarSkill}
