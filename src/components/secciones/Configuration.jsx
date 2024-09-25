@@ -8,10 +8,10 @@ const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
   return (
     <div className="section">
       <h3 className="section-titulo">Configuración General</h3>
-      <section className="section">
-        <h4 className="section-titulo section-titulo-h4">Color texto</h4>
+      <section className="config">
+        <h4 className="section-titulo section-titulo-h4">Color</h4>
         <label>
-          Selecciona el tu color Favorito
+          Selecciona el Color del Texto:
           <input
             type="color"
             value={colorTexto}
@@ -19,9 +19,8 @@ const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
           />
         </label>
 
-        <h4 className="section-titulo section-titulo-h4 ">Color fondo</h4>
         <label>
-          Selecciona el tu color Favorito
+          Selecciona el tu Color del Fondo:
           <input
             type="color"
             value={colorFondo}
@@ -29,7 +28,7 @@ const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
           />
         </label>
       </section>
-      <section className="section">
+      <section className="config">
         <h4 className="section-titulo section-titulo-h4">Fuente</h4>
         <div>
           <button onClick={() => setFuente("Open Sans")}>

@@ -1,8 +1,5 @@
-.section {
-  border: 1px solid black;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 1rem;
+.editor {
+  margin-right: 1rem;
 }
 
 .section {
@@ -12,18 +9,77 @@
   align-items: center;
   margin: 2rem 0;
   border: 1px solid #efefef;
+  border-radius: 1rem;
 }
 
 .section-titulo {
+  margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 1rem;
-  
+  margin: 1rem 0;
+
 }
+
+/*Perfil*/
+.perfil-formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-bottom: 1.2rem;
+}
+
+/*Imagen*/
+.imagen-sec {
+  position: relative;
+}
+
+.image-btn {
+  position: absolute;
+  left: 135px;
+  bottom: 10px;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.img-perfil-label {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+
+  span {
+    cursor: pointer;
+  }
+
+  input {
+    cursor: none;
+    border-style: dashed double;
+    padding: 0.25rem;
+  }
+}
+
+/* Contenido */
+
+/* Configuración */
+.config {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  input {
+    margin-left: 2rem;
+  }
+}
+
 .section-titulo-h4 {
   font-size: 1.2rem;
 }
-/* Perfil */
-/* .perfil-formulario {
-
-} */

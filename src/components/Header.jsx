@@ -1,8 +1,8 @@
 const Header = () => {
   return (
     <header>
-      <h1>Cv- Generador de Curriculum</h1>
-      <p>Genera de manera fácil y eficaz un CV Profesional.</p>
+      <h1>Creador de CV</h1>
+      <p>Crea tu currículum profesional de forma rápida y sencilla.</p>
     </header>
   );
 };

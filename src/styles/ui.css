@@ -8,7 +8,6 @@
 
 .navSection ul {
   display: flex;
-  margin: 1rem;
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
@@ -20,8 +19,22 @@
 .inputText {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  gap: 0.7rem;
+
+  input {
+    padding: 0.15rem;
+    border: 1px solid #EFEFEF;
+    border-radius: .5rem;
+    box-shadow: 2.5px 3px 0 #000;
+    outline: none;
+    transition: ease 0.25s;
+  }
+
+  input:focus {
+    box-shadow: 5.5px 7px 0 black;
+  }
 }
+
 
 /* Boton */
 .botones {

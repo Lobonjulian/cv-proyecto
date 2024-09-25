@@ -3,7 +3,7 @@ import "../../styles/secciones.css";
 
 const Perfil = ({informationGeneralPerfil, informationManipuladaPerfil}) => {
   return (
-    <div className="section">
+    <div className="section perfil">
       <h3 className="section-titulo">Información Personal</h3>
       <form className="perfil-formulario">
         <InputText labelName={"Nombres:"} estado={informationGeneralPerfil.nombres} manipular={informationManipuladaPerfil.manipularNombre}/>

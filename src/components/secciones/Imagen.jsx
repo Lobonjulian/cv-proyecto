@@ -8,10 +8,10 @@ const Imagen = ({ imgPerfilImagen, cambiarImgPerfilImagen }) => {
   };
 
   return (
-    <div className="section">
+    <div className="section imagen">
       <h3 className="section-titulo">Imagen</h3>
       {imgPerfilImagen && (
-        <div>
+        <div className="imagen-sec">
           <img
             src={imgPerfilImagen}
             alt="Imagen Perfil"
@@ -29,8 +29,8 @@ const Imagen = ({ imgPerfilImagen, cambiarImgPerfilImagen }) => {
       )}
       {!imgPerfilImagen && <p> ---No HAy Imagen--- </p>}
 
-      <form>
-        <label>
+      <form >
+        <label className="img-perfil-label">
           <span>Agrega Una Imagen</span>
           <input
             type="file"

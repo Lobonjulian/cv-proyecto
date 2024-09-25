@@ -23,7 +23,7 @@ const Editor = ({
   const cambioLink = (index) => setActual(index);
 
   return (
-    <div className="section">
+    <div className="editor">
       <NavSection actualNavSection={actual} cambioLinkNavSection={cambioLink} />
       <EditorNavLinks
         informationGeneralNavLink={informationGeneralEditor}
