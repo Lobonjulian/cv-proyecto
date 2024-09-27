@@ -12,7 +12,7 @@ const Perfil = ({informationGeneralPerfil, informationManipuladaPerfil}) => {
         <InputText labelName={"Email:"} type="email" estado={informationGeneralPerfil.correo} manipular={informationManipuladaPerfil.manipularCorreo} />
         <InputText labelName={"Teléfono:"} type="tel" estado={informationGeneralPerfil.telefono} manipular={informationManipuladaPerfil.manipularTelefono} />
         <InputText labelName={"Dirección:"} estado={informationGeneralPerfil.direction} manipular={informationManipuladaPerfil.manipularDirection}/>
-        <InputText labelName={"Descripción Laboral:"} estado={informationGeneralPerfil.descriptionLaboral} manipular={informationManipuladaPerfil.manipularDescriptionLaboral}  />
+        <InputText labelName={"Descripción Laboral:"} estado={informationGeneralPerfil.descriptionLaboral} manipular={informationManipuladaPerfil.manipularDescription}  />
       </form>
     </div>
   );

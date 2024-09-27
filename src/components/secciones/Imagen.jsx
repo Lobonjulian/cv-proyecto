@@ -17,6 +17,7 @@ const Imagen = ({ imgPerfilImagen, cambiarImgPerfilImagen }) => {
             alt="Imagen Perfil"
             className="img-perfil"
           />
+
           <button
             className="image-btn"
             onClick={() => cambiarImgPerfilImagen()}
@@ -29,15 +30,19 @@ const Imagen = ({ imgPerfilImagen, cambiarImgPerfilImagen }) => {
       )}
       {!imgPerfilImagen && <p> ---No HAy Imagen--- </p>}
 
-      <form >
+      <form>
         <label className="img-perfil-label">
           <span>Agrega Una Imagen</span>
           <input
             type="file"
+            id="fileInput"
             style={{ display: "none" }}
             onChange={imageCambio}
           />
-          <input type="button" value="Buscar ..." onClick={() => Imagen.current.click()} />
+          <input
+            type="button"
+            value="Buscar ..."
+            onClick={() => document.getElementById('fileInput').click()} />
         </label>
       </form>
     </div>

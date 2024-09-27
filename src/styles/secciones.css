@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
-  border: 1px solid #efefef;
+  border: 1px solid var(--white);
   border-radius: 1rem;
 }
 
@@ -17,7 +17,6 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin: 1rem 0;
-
 }
 
 /*Perfil*/
@@ -59,13 +58,16 @@
   }
 
   input {
-    cursor: none;
+    cursor: pointer;
     border-style: dashed double;
     padding: 0.25rem;
   }
 }
 
 /* Contenido */
+.contenido {
+  gap: 2rem
+}
 
 /* Configuración */
 .config {
@@ -77,6 +79,16 @@
 
   input {
     margin-left: 2rem;
+  }
+
+  .config-fuentes {
+    flex-direction: row;
+
+    .btn-i {
+      svg {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
