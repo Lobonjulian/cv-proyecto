@@ -20,6 +20,7 @@ const PropsApp = () => {
   const [colorTexto, setColorTexto] = useState("#3D3D3D");
   const [colorFondo, setColorFondo] = useState("#AFAFB2");
   const [fuente, setFuente] = useState("serif");
+  const [mostrarPreview, setMostrarPreview] = useState(true);
 
   // Desestructuración y Manejo de los Estilos
   const estilosDatos = [colorTexto, colorFondo, fuente];
@@ -69,13 +70,18 @@ const PropsApp = () => {
         cambiarSkillEditor={setSkill}
         estilosDatosEditor={estilosDatos}
         estilosManejosEditor={estilosManejo}
+        mostrarPreviewEditor={mostrarPreview}
+        setMostrarPreviewEditor={setMostrarPreview}
       />
+
       <Preview
         informationGeneralPreview={informationGeneral}
         imgPerfilPreview={imgPerfil}
         educationPreview={education}
         experienciaPreview={experiencia}
         skillPreview={skill}
+        estilosDatos={estilosDatos}
+        mostrarPreview={mostrarPreview}
       />
     </main>
   );

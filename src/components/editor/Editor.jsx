@@ -18,6 +18,8 @@ const Editor = ({
   cambiarSkillEditor,
   estilosDatosEditor,
   estilosManejosEditor,
+  mostrarPreviewEditor,
+  setMostrarPreviewEditor,
 }) => {
   const [actual, setActual] = useState(0);
   const cambioLink = (index) => setActual(index);
@@ -40,7 +42,15 @@ const Editor = ({
         estilosDatosNavLink={estilosDatosEditor}
         estilosManejosNavLink={estilosManejosEditor}
       />
-      <EditorBotones />
+      <EditorBotones
+        informationManipuladaBoton={informationManipuladaEditor}
+        cambiarImgPerfilBoton={cambiarImgPerfilEditor}
+        cambiarEducationBoton={cambiarEducationEditor}
+        cambiarExperienciaBoton={cambiarExperienciaEditor}
+        cambiarSkillBoton={cambiarSkillEditor}
+        setMostrarPreviewBoton={setMostrarPreviewEditor}
+        mostrarPreviewBoton={mostrarPreviewEditor}
+      />
     </div>
   );
 };

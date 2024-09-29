@@ -14,12 +14,20 @@ const Preview = ({
   educationPreview,
   experienciaPreview,
   skillPreview,
+  estilosDatos,
+  mostrarPreview,
 }) => {
+  if (!mostrarPreview) return; 
+
+  const [colorTexto, colorFondo, fuente] = estilosDatos ;
+  const FuenteEstilo = { fontFamily: fuente, fontSize: "1rem"};
+  
+
   return (
-    <div className="preview">
-      <header className="preview preview-header">
-        <div className="preview preview-img triangulo">
-          <img src={imgPerfilPreview} alt="logo" />
+    <div className="preview" style={{backgroundColor: colorFondo, color: colorTexto, FuenteEstilo}}>
+      <header className="preview preview-header" style={{ backgroundColor: colorFondo, color: colorTexto }}>
+        <div className="preview-img triangulo"  style={{ backgroundColor: colorFondo }} >
+          { imgPerfilPreview && <img src={imgPerfilPreview} alt="imagen Perfil" /> }
         </div>
 
         <header className="preview-section header-nombres ">
@@ -32,6 +40,7 @@ const Preview = ({
 
           <section className="header-bio">
             <h3 className="">Perfil Profesional</h3>
+            <h4> {informationGeneralPreview.profesion}</h4>
             <p className="">{informationGeneralPreview.descriptionLaboral}</p>
           </section>
 
@@ -42,7 +51,7 @@ const Preview = ({
             <div className="header-contacto-div">
               <div className="header-contacto-div">
                 <p className="">
-                  {" "}
+                  {" "} 
                   {<MdOutlinePhonelinkRing />}{" "}
                   {informationGeneralPreview.telefono}
                 </p>

@@ -10,20 +10,15 @@
 
 .preview-img {
   position: relative;
-  height: 100%;
   padding: 1rem;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--btnGray);
-
+ 
   /* borrar */
   img {
     position: absolute;
-    right: 24px;
-    top: 41px;
+    right: clamp(1rem, 2.5vw, 2rem);
+    top: 50px;
     width: 6rem;
     height: 7rem;
-
   }
 }
 
@@ -47,6 +42,11 @@
   h3 {
     font-size: 1.25rem;
     margin-top: 1rem;
+  }
+
+  h4 {
+    text-align: center;
+    padding: .75rem 0;
   }
 
   p {
@@ -147,6 +147,6 @@ border: solid 1px black;
 
 .badge-final {
   border-radius:0 63rem 63rem 0;
-  background: #7005fc;
-  color: #fff;
+  background: var(--blue);
+  color: var(--btnText);
 }

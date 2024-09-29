@@ -1,9 +1,11 @@
 :root {
+  --black: #1A1A1A;
+  --white: #EFEFEF;
+  --blue: #7408DF;
   --btnRed: #F3480F;
   --btnGreen: #0CF42B;
   --btnGray: #AFAFB2;
-  --btnText: #ffffff;
-  --black: #1a1a1a;
+  --btnText: #FFFFFF;
 }
 
 * {
@@ -42,7 +44,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #AFAFB2;
+  background-color:var(--btnGray);
 }
 
 .footer-redes,

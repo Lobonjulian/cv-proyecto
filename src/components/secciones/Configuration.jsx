@@ -30,25 +30,28 @@ const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
       </section>
       <section className="config">
         <h4 className="section-titulo section-titulo-h4">Fuente</h4>
-        <div>
-          <button onClick={() => setFuente("Open Sans")}>
-            <span>
+        <div className="config config-fuentes">
+          <button className="btn-visualizar config" onClick={() => setFuente("monospace")}>
+            <span  className="btn-i">
               <RiFontMono />
             </span>
             <span>Mono</span>
           </button>
-          <button onClick={() => setFuente("Open Sans")}>
-            <span>
-              <RiFontSans />
-            </span>
-            <span>Sans</span>
-          </button>
-          <button onClick={() => setFuente("Open Sans")}>
-            <span>
+          
+          <button className="btn-visualizar config" onClick={() => setFuente("sans-serif")}>
+            <span  className="btn-i">
               <RiFontSansSerif />
             </span>
             <span>SansSerif</span>
           </button>
+
+          <button className="btn-visualizar config" onClick={() => setFuente("sans")}>
+            <span className="btn-i">
+              <RiFontSans />
+            </span>
+            <span>Sans</span>
+          </button>
+
         </div>
       </section>
     </div>
