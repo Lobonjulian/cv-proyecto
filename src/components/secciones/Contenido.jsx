@@ -4,7 +4,7 @@ import Accordion from "../ui/Accordion";
 const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperiencia, skill, cambiarSkill, abrirAccordion, cerrarAccordion
 }) => {
   return (
-    <div className="section">
+    <div className="section contenido">
       <h3 className="section-titulo">Información General</h3>
       <Accordion
         titulo="Educación"
@@ -30,7 +30,6 @@ const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperienci
         abrirAccordion={abrirAccordion}
         cerrarAccordion={cerrarAccordion}
       />
-
     </div>
   )
 }

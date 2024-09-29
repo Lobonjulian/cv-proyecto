@@ -25,7 +25,7 @@ export const Information = {
     {
       id: 1,
       institution: "Cagliostro S.A.",
-      nombre: "Cajero",
+      nombre: "Desarrollador Front-end",
       fechaInicio: "05-2022",
       fechaFinal: "12-2024",
       description:
