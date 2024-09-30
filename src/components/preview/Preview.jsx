@@ -17,14 +17,15 @@ const Preview = ({
   estilosDatos,
   mostrarPreview,
 }) => {
+  
   if (!mostrarPreview) return; 
 
   const [colorTexto, colorFondo, fuente] = estilosDatos ;
-  const FuenteEstilo = { fontFamily: fuente, fontSize: "1rem"};
+  const FuenteEstilo = { fontFamily: fuente, fontSize: "1rem", backgroundColor: colorFondo, color: colorTexto};
   
 
   return (
-    <div className="preview" style={{backgroundColor: colorFondo, color: colorTexto, FuenteEstilo}}>
+    <div className="preview" style={FuenteEstilo}>
       <header className="preview preview-header" style={{ backgroundColor: colorFondo, color: colorTexto }}>
         <div className="preview-img triangulo"  style={{ backgroundColor: colorFondo }} >
           { imgPerfilPreview && <img src={imgPerfilPreview} alt="imagen Perfil" /> }
@@ -32,7 +33,7 @@ const Preview = ({
 
         <header className="preview-section header-nombres ">
           <section className="preview preview-header-header-section">
-            <h2 className="preview">
+            <h2 className="preview" style={FuenteEstilo}>
               {informationGeneralPreview.nombres}{" "}
               {informationGeneralPreview.apellidos}
             </h2>
@@ -77,13 +78,13 @@ const Preview = ({
         <aside className="preview lateral">
           {/* version preliminar*/}
           {skillPreview.length !== 0 && (
-            <DatosPreview titulo="Habilidades" datos={skillPreview} />
+            <DatosPreview titulo="Comunicaciones" datos={skillPreview} />
           )}
           {skillPreview.length !== 0 && (
-            <DatosPreview titulo="Habilidades" datos={skillPreview} />
+            <DatosPreview titulo="idioma" datos={skillPreview} />
           )}
           {skillPreview.length !== 0 && (
-            <DatosPreview titulo="Habilidades" datos={skillPreview} />
+            <DatosPreview titulo="Redes" datos={skillPreview} />
           )}
         </aside>
         <main className="main">

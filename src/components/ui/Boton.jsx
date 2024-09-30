@@ -1,7 +1,7 @@
 import "../../styles/ui.css";
 
-const Boton = ({ nombreBtn, className}) => {
-  return <button className={className}>{nombreBtn}</button>;
+const Boton = ({ nombreBtn, className, handleClick}) => {
+  return <button className={className} onClick={handleClick}>{nombreBtn}</button>;
 };
 
 export default Boton;

@@ -48,8 +48,8 @@ const Editor = ({
         cambiarEducationBoton={cambiarEducationEditor}
         cambiarExperienciaBoton={cambiarExperienciaEditor}
         cambiarSkillBoton={cambiarSkillEditor}
-        setMostrarPreviewBoton={setMostrarPreviewEditor}
         mostrarPreviewBoton={mostrarPreviewEditor}
+        setMostrarPreviewBoton={setMostrarPreviewEditor}
       />
     </div>
   );

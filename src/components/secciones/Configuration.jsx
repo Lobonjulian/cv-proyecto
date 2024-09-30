@@ -42,7 +42,7 @@ const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
             <span  className="btn-i">
               <RiFontSansSerif />
             </span>
-            <span>SansSerif</span>
+            <span>Serif</span>
           </button>
 
           <button className="btn-visualizar config" onClick={() => setFuente("sans")}>
@@ -52,10 +52,26 @@ const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
             <span>Sans</span>
           </button>
 
+          <button className="btn-visualizar config" onClick={() => setFuente("cursive")}>
+            <span className="btn-i">
+              <RiFontSans />
+            </span>
+            <span>Cursiva</span>
+          </button> 
         </div>
       </section>
     </div>
   );
 };
+
+
+// const BotonIcono = ({ setFuente, title, icono}) => {
+//   <button className="btn-visualizar config" onClick={() => setFuente("sans")}>
+//   <span className="btn-i">
+//    { icono}
+//   </span>
+//   <span>{title}</span>
+// </button>
+// }
 
 export default Configuration;
