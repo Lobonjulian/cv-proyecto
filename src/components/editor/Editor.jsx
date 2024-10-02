@@ -16,6 +16,10 @@ const Editor = ({
   cambiarExperienciaEditor,
   skillEditor,
   cambiarSkillEditor,
+  idiomaEditor,
+  cambiarIdiomaEditor,
+  redesEditor,
+  cambiarRedesEditor,
   estilosDatosEditor,
   estilosManejosEditor,
   mostrarPreviewEditor,
@@ -39,6 +43,10 @@ const Editor = ({
         cambiarExperienciaNavLink={cambiarExperienciaEditor}
         skillNavLink={skillEditor}
         cambiarSkillNavLink={cambiarSkillEditor}
+        idiomaNavLink={idiomaEditor}
+        cambiarIdiomaNavLink={cambiarIdiomaEditor}
+        redesNavLink={redesEditor}
+        cambiarRedesNavLink={cambiarRedesEditor}
         estilosDatosNavLink={estilosDatosEditor}
         estilosManejosNavLink={estilosManejosEditor}
       />

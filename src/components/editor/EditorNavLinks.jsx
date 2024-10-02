@@ -13,9 +13,13 @@ const EditorNavLinks = ({
   educationNavLink,
   experienciaNavLink,
   skillNavLink,
+  idiomaNavLink,
+  redesNavLink,
   cambiarEducationNavLink,
   cambiarExperienciaNavLink,
   cambiarSkillNavLink,
+  cambiarIdiomaNavLink,
+  cambiarRedesNavLink,
   estilosDatosNavLink,
   estilosManejosNavLink,
 }) => {
@@ -23,10 +27,10 @@ const EditorNavLinks = ({
   const clausuraAccordion = (abrirSectionAccordion) => {
     if (abrirSectionAccordion === aperturaAccordion) {
       setAperturaAccordion(null);
-      return
+      return;
     }
     setAperturaAccordion(abrirSectionAccordion);
-  }
+  };
 
   switch (linkActualNavLink) {
     case 0: {
@@ -46,10 +50,30 @@ const EditorNavLinks = ({
       );
     }
     case 2: {
-      return <Contenido education={educationNavLink} experiencia={experienciaNavLink} skill={skillNavLink} cambiarEducation={cambiarEducationNavLink} cambiarExperiencia={cambiarExperienciaNavLink} cambiarSkill={cambiarSkillNavLink} abrirAccordion={aperturaAccordion} cerrarAccordion={clausuraAccordion} />;
+      return (
+        <Contenido
+          education={educationNavLink}
+          experiencia={experienciaNavLink}
+          skill={skillNavLink}
+          idioma={idiomaNavLink}
+          redes={redesNavLink}
+          cambiarEducation={cambiarEducationNavLink}
+          cambiarExperiencia={cambiarExperienciaNavLink}
+          cambiarSkill={cambiarSkillNavLink}
+          cambiarIdioma={cambiarIdiomaNavLink}
+          cambiarRedes={cambiarRedesNavLink}
+          abrirAccordion={aperturaAccordion}
+          cerrarAccordion={clausuraAccordion}
+        />
+      );
     }
     case 3: {
-      return <Configuration  estilosDatosConfig={estilosDatosNavLink} estilosManejosConfig={estilosManejosNavLink}/>;
+      return (
+        <Configuration
+          estilosDatosConfig={estilosDatosNavLink}
+          estilosManejosConfig={estilosManejosNavLink}
+        />
+      );
     }
     default:
       break;

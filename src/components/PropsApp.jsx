@@ -17,6 +17,8 @@ const PropsApp = () => {
   const [education, setEducation] = useState(Information.education);
   const [experiencia, setExperiencia] = useState(Information.experiencia);
   const [skill, setSkill] = useState(Information.skill);
+  const [idioma, setIdioma] = useState(Information.idioma);
+  const [redes, setRedes] = useState(Information.redes);
   const [colorTexto, setColorTexto] = useState("#3D3D3D");
   const [colorFondo, setColorFondo] = useState("#AFAFB2");
   const [fuente, setFuente] = useState("serif");
@@ -68,6 +70,10 @@ const PropsApp = () => {
         cambiarExperienciaEditor={setExperiencia}
         skillEditor={skill}
         cambiarSkillEditor={setSkill}
+        idiomaEditor={idioma}
+        cambiarIdiomaEditor={setIdioma}
+        redesEditor={redes}
+        cambiarRedesEditor={setRedes}
         estilosDatosEditor={estilosDatos}
         estilosManejosEditor={estilosManejo}
         mostrarPreviewEditor={mostrarPreview}
@@ -80,6 +86,8 @@ const PropsApp = () => {
         educationPreview={education}
         experienciaPreview={experiencia}
         skillPreview={skill}
+        idiomaPreview={idioma}
+        redesPreview={redes}
         estilosDatos={estilosDatos}
         mostrarPreview={mostrarPreview}
       />

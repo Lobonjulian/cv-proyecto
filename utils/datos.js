@@ -91,4 +91,45 @@ export const Information = {
       anio: 2,
     },
   ],
+
+  idioma: [
+    {
+      id: 1,
+      nombre: "Español",
+      porcentaje: 80,
+    },
+    {
+      id: 2,
+      nombre: "Portugues",
+      porcentaje: 50,
+    },
+    {
+      id: 3,
+      nombre: "Ingles",
+      porcentaje: 50,
+    },
+  ],
+
+  redes: [
+    {
+      id: 1,
+      url: "https://www.facebook.com",
+    },
+    {
+      id: 2,
+      url: "https://www.twitter.com",
+    },
+    {
+      id: 3,
+      url: "https://www.instagram.com",
+    },
+    {
+      id: 4,
+      nombre: "https://www.linkedin.com",
+    },
+    {
+      id: 5,
+      url: "https://www.github.com",
+    },
+  ],
 };

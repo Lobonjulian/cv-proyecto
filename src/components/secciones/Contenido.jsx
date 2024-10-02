@@ -1,7 +1,19 @@
 import "../../styles/secciones.css";
 import Accordion from "../ui/Accordion";
 
-const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperiencia, skill, cambiarSkill, abrirAccordion, cerrarAccordion
+const Contenido = ({
+  education,
+  cambiarEducation,
+  experiencia,
+  cambiarExperiencia,
+  skill,
+  cambiarSkill,
+  idioma,
+  cambiarIdioma,
+  redes,
+  cambiarRedes,
+  abrirAccordion,
+  cerrarAccordion,
 }) => {
   return (
     <div className="section contenido">
@@ -13,9 +25,8 @@ const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperienci
         cambiarDatos={cambiarEducation}
         abrirAccordion={abrirAccordion}
         cerrarAccordion={cerrarAccordion}
-
       />
-       <Accordion
+      <Accordion
         titulo="Experiencia"
         index={1}
         datos={experiencia}
@@ -23,16 +34,32 @@ const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperienci
         abrirAccordion={abrirAccordion}
         cerrarAccordion={cerrarAccordion}
       />
-       <Accordion
-        titulo="skill"
+      <Accordion
+        titulo="Habilidades"
         index={2}
         datos={skill}
         cambiarDatos={cambiarSkill}
         abrirAccordion={abrirAccordion}
         cerrarAccordion={cerrarAccordion}
       />
+      <Accordion
+        titulo="Idioma"
+        index={3}
+        datos={idioma}
+        cambiarDatos={cambiarIdioma}
+        abrirAccordion={abrirAccordion}
+        cerrarAccordion={cerrarAccordion}
+      />
+      <Accordion
+        titulo="Redes Sociales"
+        index={4}
+        datos={redes}
+        cambiarDatos={cambiarRedes}
+        abrirAccordion={abrirAccordion}
+        cerrarAccordion={cerrarAccordion}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default Contenido
+export default Contenido;

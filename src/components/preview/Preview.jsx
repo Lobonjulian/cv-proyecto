@@ -14,6 +14,8 @@ const Preview = ({
   educationPreview,
   experienciaPreview,
   skillPreview,
+  idiomaPreview,
+  redesPreview,
   estilosDatos,
   mostrarPreview,
 }) => {
@@ -81,7 +83,7 @@ const Preview = ({
                 style={{ backgroundColor: colorTexto, color: colorFondo }}
               >
                 <p className="header-contacto-p">
-                  {<MdLanguage />} {informationGeneralPreview.direction}
+                  {<MdLanguage />} {informationGeneralPreview.correo}
                 </p>
                 <p className="header-contacto-p">
                   {<MdPinDrop />} {informationGeneralPreview.direction}
@@ -97,32 +99,29 @@ const Preview = ({
           className="preview lateral"
           style={{ backgroundColor: colorTexto, color: colorFondo }}
         >
-          {/* version preliminar*/}
-          {skillPreview.length !== 0 && (
-            <DatosPreview
-              titulo="Comunicaciones"
-              datos={skillPreview}
-              estilo={{ backgroundColor: colorFondo, color: colorTexto }}
-            />
-          )}
-          {skillPreview.length !== 0 && (
-            <DatosPreview
-              titulo="idioma"
-              datos={skillPreview}
-              estilo={{ backgroundColor: colorFondo, color: colorTexto }}
-            />
-          )}
-          {skillPreview.length !== 0 && (
-            <DatosPreview
-              titulo="Redes"
-              datos={skillPreview}
-              estilo={{
-                backgroundColor: colorFondo,
-                color: colorTexto,
-                border: colorFondo,
-              }}
-            />
-          )}
+           {skillPreview.length !== 0 && (
+                <DatosPreview
+                  titulo="Habilidades"
+                  datos={skillPreview}
+                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                />
+              )}
+
+           {idiomaPreview.length !== 0 && (
+                <DatosPreview
+                  titulo="Idioma"
+                  datos={idiomaPreview}
+                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                />
+              )}
+              {redesPreview.length !== 0 && (
+                <DatosPreview
+                  titulo="Redes Sociales"
+                  datos={redesPreview}
+                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                />
+              )}
+         
         </aside>
 
         <main className="main">
