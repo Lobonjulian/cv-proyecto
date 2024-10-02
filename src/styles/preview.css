@@ -9,13 +9,12 @@
 }
 
 .preview-img {
-  position: relative;
-  padding: 1rem;
- 
-  /* borrar */
+  .triangulo{
+    position: relative;
+  }
   img {
     position: absolute;
-    right: clamp(1rem, 2.5vw, 2rem);
+    right: clamp(0rem, 2.5vw, 1rem);
     top: 50px;
     width: 6rem;
     height: 7rem;
@@ -27,11 +26,12 @@
   height: 0;
   border-style: solid;
   border-width: 0 0 200px 128px;
-  border-color: transparent transparent #f0f1ed transparent;
+  border-color: transparent transparent var(--white) transparent;
 }
 
 .header-nombres {
   h2 {
+    padding-top: 1rem;
     font-size: 1.75rem;
   }
 }
@@ -57,22 +57,17 @@
 .header-contacto {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 2rem;
-
-  .triangulo {
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-style: solid;
-    border-width: 18px 54px 18px 0;
-    border-color: transparent #7048e8 transparent transparent;
+  margin-top: 1rem;
+  
+  .triangulos {
+    margin: .2rem;
+    border-right: .5rem solid var(--blue);
+    border-radius: 1rem;
+    background-color: var(--white);
+    padding: .3rem;
 
     h4 {
-      position: absolute;
-      left: 60px;
-      display: inline-block;
+      font-size: 1.5rem;
     }
   }
 }
@@ -86,24 +81,30 @@
   background: var(--btnGray);
 }
 .header-contacto-div {
+  gap: 0.3rem;
   div {
     display: flex; 
     flex-direction: row;
-    justify-content: center;
-    gap:1rem;
-    padding-top: 0.5rem;
-    background-color: #d5e3f1 ;
+    justify-content: space-between;
+    padding: 0.2rem;
+    background-color: var(--white);
+    max-width: 300px;
+    border-radius: 1rem;
+  }
+  .header-contacto-p {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
   }
 }
 
 .preview-section {
  display: flex;
- border: 1px solid red;
 }
 
 .lateral {
-  width: 20%;
-  background-color: #ccc;
+  /* width: 40%; */
+  margin-top: 2rem;
 }
 
 .main {
@@ -111,21 +112,36 @@
   flex-direction: column;
 }
 
+.main-section-div {
+  margin: 0 .5rem;
+}
+
 .datos {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1.5rem;
+  
+  
   h4 {
-    background-color: #e1deeb;
+    margin-bottom: .75rem;
     border-radius: 1rem;
     padding: .25rem;
   }
 }
+
+.datos-div-4{
+  background: var(--white);
+  width: 80%;
+  text-align: center;
+  border: 2px solid black; 
+  border-bottom: none;
+}
 .datos-ul {
-border: solid 1px black;
+  margin: 0 .5rem;
   padding: 1rem;
   width: 100%;
+  border: solid 1px var(--black);
 }
 
 .datos-div {
@@ -133,15 +149,20 @@ border: solid 1px black;
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 
+.habilidad{
+  margin: 0;
+  border-bottom-style: none ;
+}
+.paso {
+  border-top-style: none
+} 
 .badge {
   font-size: .75rem;
   font-weight: 600;
   text-align: center;
   border-radius: 63rem 0 0 63rem;
-  background: rgb(189, 182, 182);
   padding: .25rem .5rem;
 }
 

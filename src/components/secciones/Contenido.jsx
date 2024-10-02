@@ -13,6 +13,7 @@ const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperienci
         cambiarDatos={cambiarEducation}
         abrirAccordion={abrirAccordion}
         cerrarAccordion={cerrarAccordion}
+
       />
        <Accordion
         titulo="Experiencia"
@@ -23,7 +24,7 @@ const Contenido = ({ education, cambiarEducation, experiencia, cambiarExperienci
         cerrarAccordion={cerrarAccordion}
       />
        <Accordion
-        titulo="Habilidades"
+        titulo="skill"
         index={2}
         datos={skill}
         cambiarDatos={cambiarSkill}

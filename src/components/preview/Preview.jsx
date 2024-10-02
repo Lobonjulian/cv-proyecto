@@ -17,18 +17,27 @@ const Preview = ({
   estilosDatos,
   mostrarPreview,
 }) => {
-  
-  if (!mostrarPreview) return; 
+  if (!mostrarPreview) return;
 
-  const [colorTexto, colorFondo, fuente] = estilosDatos ;
-  const FuenteEstilo = { fontFamily: fuente, fontSize: "1rem", backgroundColor: colorFondo, color: colorTexto};
-  
+  const [colorTexto, colorFondo, fuente] = estilosDatos;
+  const FuenteEstilo = {
+    fontFamily: fuente,
+    backgroundColor: colorFondo,
+    color: colorTexto,
+  };
 
   return (
     <div className="preview" style={FuenteEstilo}>
-      <header className="preview preview-header" style={{ backgroundColor: colorFondo, color: colorTexto }}>
-        <div className="preview-img triangulo"  style={{ backgroundColor: colorFondo }} >
-          { imgPerfilPreview && <img src={imgPerfilPreview} alt="imagen Perfil" /> }
+      <header
+        className="preview preview-header"
+        style={{ backgroundColor: colorFondo, color: colorTexto }}
+      >
+        <div className="preview-img " style={{ backgroundColor: colorFondo }}>
+          <div className=" triangulo">
+            {imgPerfilPreview && (
+              <img src={imgPerfilPreview} alt="imagen Perfil" />
+            )}
+          </div>
         </div>
 
         <header className="preview-section header-nombres ">
@@ -46,26 +55,35 @@ const Preview = ({
           </section>
 
           <section className="header-contacto">
-            <span className="triangulo">
-              <h4 className="">contacto</h4>
-            </span>
-            <div className="header-contacto-div">
-              <div className="header-contacto-div">
-                <p className="">
-                  {" "} 
+            <div className="triangulos" style={{ backgroundColor: colorTexto }}>
+              <h4 style={{ color: colorFondo }}>contacto</h4>
+            </div>
+            <div
+              className="header-contacto-div"
+              style={{ backgroundColor: colorFondo }}
+            >
+              <div
+                className="header-contacto-div"
+                style={{ backgroundColor: colorTexto, color: colorFondo }}
+              >
+                <p className="header-contacto-p">
+                  {" "}
                   {<MdOutlinePhonelinkRing />}{" "}
                   {informationGeneralPreview.telefono}
                 </p>
-                <p className="">
+                <p className="header-contacto-p">
                   {<MdMarkunread />} {informationGeneralPreview.correo}
                 </p>
               </div>
 
-              <div className="header-contacto-div">
-                <p className="">
+              <div
+                className="header-contacto-div"
+                style={{ backgroundColor: colorTexto, color: colorFondo }}
+              >
+                <p className="header-contacto-p">
                   {<MdLanguage />} {informationGeneralPreview.direction}
                 </p>
-                <p className="">
+                <p className="header-contacto-p">
                   {<MdPinDrop />} {informationGeneralPreview.direction}
                 </p>
               </div>
@@ -75,31 +93,63 @@ const Preview = ({
       </header>
 
       <section className="preview-section">
-        <aside className="preview lateral">
+        <aside
+          className="preview lateral"
+          style={{ backgroundColor: colorTexto, color: colorFondo }}
+        >
           {/* version preliminar*/}
           {skillPreview.length !== 0 && (
-            <DatosPreview titulo="Comunicaciones" datos={skillPreview} />
+            <DatosPreview
+              titulo="Comunicaciones"
+              datos={skillPreview}
+              estilo={{ backgroundColor: colorFondo, color: colorTexto }}
+            />
           )}
           {skillPreview.length !== 0 && (
-            <DatosPreview titulo="idioma" datos={skillPreview} />
+            <DatosPreview
+              titulo="idioma"
+              datos={skillPreview}
+              estilo={{ backgroundColor: colorFondo, color: colorTexto }}
+            />
           )}
           {skillPreview.length !== 0 && (
-            <DatosPreview titulo="Redes" datos={skillPreview} />
+            <DatosPreview
+              titulo="Redes"
+              datos={skillPreview}
+              estilo={{
+                backgroundColor: colorFondo,
+                color: colorTexto,
+                border: colorFondo,
+              }}
+            />
           )}
         </aside>
+
         <main className="main">
-          <section className="">
-            <div className="">
+          <section className="main-section">
+            <div className="main-section-div">
               {educationPreview.length !== 0 && (
-                <DatosPreview titulo="Educación" datos={educationPreview} />
+                <DatosPreview
+                  titulo="Educación"
+                  datos={educationPreview}
+                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                />
               )}
 
               {experienciaPreview.length !== 0 && (
-                <DatosPreview titulo="Experiencia" datos={experienciaPreview} />
+                <DatosPreview
+                  titulo="Experiencia"
+                  datos={experienciaPreview}
+                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                />
               )}
 
               {skillPreview.length !== 0 && (
-                <DatosPreview titulo="Habilidades" datos={skillPreview} />
+                <DatosPreview
+                  titulo="Habilidades"
+                  datos={skillPreview}
+                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                />
               )}
             </div>
           </section>

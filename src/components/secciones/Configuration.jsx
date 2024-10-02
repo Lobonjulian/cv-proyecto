@@ -1,9 +1,9 @@
 import "../../styles/secciones.css";
 import { RiFontMono, RiFontSans, RiFontSansSerif } from "react-icons/ri";
 
-const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
-  const [colorTexto, colorFondo] = estilosDatosConfig
-  const [setColorTexto, setColorFondo, setFuente] = estilosManejosConfig 
+const Configuration = ({ estilosDatosConfig, estilosManejosConfig }) => {
+  const [colorTexto, colorFondo] = estilosDatosConfig;
+  const [setColorTexto, setColorFondo, setFuente] = estilosManejosConfig;
 
   return (
     <div className="section">
@@ -28,50 +28,48 @@ const Configuration = ({estilosDatosConfig, estilosManejosConfig}) => {
           />
         </label>
       </section>
+      
       <section className="config">
         <h4 className="section-titulo section-titulo-h4">Fuente</h4>
         <div className="config config-fuentes">
-          <button className="btn-visualizar config" onClick={() => setFuente("monospace")}>
-            <span  className="btn-i">
-              <RiFontMono />
-            </span>
-            <span>Mono</span>
-          </button>
-          
-          <button className="btn-visualizar config" onClick={() => setFuente("sans-serif")}>
-            <span  className="btn-i">
-              <RiFontSansSerif />
-            </span>
-            <span>Serif</span>
-          </button>
-
-          <button className="btn-visualizar config" onClick={() => setFuente("sans")}>
-            <span className="btn-i">
-              <RiFontSans />
-            </span>
-            <span>Sans</span>
-          </button>
-
-          <button className="btn-visualizar config" onClick={() => setFuente("cursive")}>
-            <span className="btn-i">
-              <RiFontSans />
-            </span>
-            <span>Cursiva</span>
-          </button> 
+          <BotonIcono
+            nombreBtn={"Mono"}
+            icono={<RiFontMono />}
+            handleClick={() => setFuente("monospace")}
+          />
+          <BotonIcono
+            nombreBtn={"Serif"}
+            icono={<RiFontSansSerif />}
+            handleClick={() => setFuente("sans-serif")}
+          />
+          <BotonIcono
+            nombreBtn={"Sans"}
+            icono={<RiFontSans />}
+            handleClick={() => setFuente("sans")}
+          />
+          <BotonIcono
+            nombreBtn={"Cursiva"}
+            icono={<RiFontSans />}
+            handleClick={() => setFuente("cursive")}
+          />
+          <BotonIcono
+            nombreBtn={"Impact"}
+            icono={<RiFontSans />}
+            handleClick={() => setFuente("impact")}
+          />
         </div>
       </section>
     </div>
   );
 };
 
-
-// const BotonIcono = ({ setFuente, title, icono}) => {
-//   <button className="btn-visualizar config" onClick={() => setFuente("sans")}>
-//   <span className="btn-i">
-//    { icono}
-//   </span>
-//   <span>{title}</span>
-// </button>
-// }
+const BotonIcono = ({ handleClick, nombreBtn, icono }) => {
+  return (
+    <button className="btn-visualizar config" onClick={handleClick}>
+      <span className="btn-i">{icono}</span>
+      <span>{nombreBtn}</span>
+    </button>
+  );
+};
 
 export default Configuration;

@@ -79,6 +79,7 @@ const Accordion = ({
           onSubmit={onSubmit}
           datos={datos}
           onEditar={manejoEditar}
+          tipo={datos.skill}
         />
       )}
     </div>
