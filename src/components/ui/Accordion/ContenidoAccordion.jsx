@@ -11,7 +11,7 @@ const ContenidoAccordion = ({
         {datos.map((unidadDatos, index) => (
           <ElementosListaDatos
             key={unidadDatos.id}
-            listaDatos={datos}
+            listaDatos={datos.id}
             index={index}
             unidadDatos={unidadDatos}
             cambiarDatos={cambiarDatos}
@@ -55,7 +55,7 @@ const ElementosListaDatos = ({
         <button
           className="btn-ejemplo"
           onClick={() => {
-            onEditar(); setEnviarFormulario(index);
+            onEditar(index.id); setEnviarFormulario(index);
           }}
         >
           Editar Datos

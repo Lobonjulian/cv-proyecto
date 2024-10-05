@@ -7,20 +7,25 @@ const EditorBotones = ({
   cambiarEducationBoton,
   cambiarExperienciaBoton,
   cambiarSkillBoton,
+  cambiarIdiomaBoton,
+  cambiarRedesBoton,
   mostrarPreviewBoton,
   setMostrarPreviewBoton,
 }) => {
   const EnviarEJemplo = () => {
     informationManipuladaBoton.manipularNombre(Information.nombres);
     informationManipuladaBoton.manipularApellido(Information.apellidos);
+    informationManipuladaBoton.manipularProfesion(Information.profesion);
     informationManipuladaBoton.manipularDescription(Information.perfilLaboral);
     informationManipuladaBoton.manipularCorreo(Information.correo);
+    informationManipuladaBoton.manipularTelefono(Information.telefono);
     informationManipuladaBoton.manipularDirection(Information.direction);
-    informationManipuladaBoton.manipularDirection(Information.telefono);
     cambiarImgPerfilBoton(Information.imagenPerfil);
     cambiarEducationBoton(Information.education);
     cambiarExperienciaBoton(Information.experiencia);
     cambiarSkillBoton(Information.skill);
+    cambiarIdiomaBoton(Information.idioma);
+    cambiarRedesBoton(Information.redes);
   };
 
   const BorrarPreview = () => {
@@ -31,6 +36,8 @@ const EditorBotones = ({
     cambiarEducationBoton([]);
     cambiarExperienciaBoton([]);
     cambiarSkillBoton([]);
+    cambiarIdiomaBoton([])
+    cambiarRedesBoton([])
   };
 
   return (

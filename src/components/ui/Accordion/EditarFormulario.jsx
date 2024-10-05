@@ -8,7 +8,7 @@ const EditarFormulario = ({ index, datos, onSubmit, onEditar }) => {
     setEnCurso(!enCurso);
   };
 
-  if (index >= 2) {
+  if (index === 2) {
     return (
       <form onSubmit={(e) => onSubmit(e, index)} className="editar-formulario">
         <label className="inputText">
@@ -16,7 +16,7 @@ const EditarFormulario = ({ index, datos, onSubmit, onEditar }) => {
           <input name="nombre"  defaultValue={masDatos.nombre} placeholder="Nombre de la habilidad" required />
         </label>
 
-        <label className="">
+        <label>
           <span>Porcentaje:</span>
           <input name="porcentaje" type="range" min="0" max="100"  required />
         </label>
@@ -36,7 +36,17 @@ const EditarFormulario = ({ index, datos, onSubmit, onEditar }) => {
         <Botones onEditar={onEditar} />
       </form>
     );
-  } else {
+  } else if (index  > 2) {
+    return (
+      <form onSubmit={(e) => onSubmit(e, index)} className="editar-formulario">
+      <label className="inputText">
+        <span>Nombre:</span>
+        <input name="nombre"  placeholder="Nombre" required />
+      </label>
+      <Botones onEditar={onEditar} />
+      </form>
+    )
+  }else {
     return (
       <form onSubmit={(e) => onSubmit(e, index)} className="editar-formulario">
         <label className="inputText">

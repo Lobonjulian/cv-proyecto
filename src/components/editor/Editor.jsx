@@ -56,6 +56,8 @@ const Editor = ({
         cambiarEducationBoton={cambiarEducationEditor}
         cambiarExperienciaBoton={cambiarExperienciaEditor}
         cambiarSkillBoton={cambiarSkillEditor}
+        cambiarIdiomaBoton={cambiarIdiomaEditor}
+        cambiarRedesBoton={cambiarRedesEditor}
         mostrarPreviewBoton={mostrarPreviewEditor}
         setMostrarPreviewBoton={setMostrarPreviewEditor}
       />

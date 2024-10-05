@@ -1,5 +1,4 @@
-import DatosPreview from "./DatosPreview";
-
+import InfoDatos from "./InfoDatosPreview";
 import "../../styles/preview.css";
 import {
   MdLanguage,
@@ -42,35 +41,35 @@ const Preview = ({
           </div>
         </div>
 
-        <header className="preview-section header-nombres ">
-          <section className="preview preview-header-header-section">
-            <h2 className="preview" style={FuenteEstilo}>
-              {informationGeneralPreview.nombres}{" "}
+        <header className="header-nombres ">
+          <section>
+            <h2 style={FuenteEstilo}>
+              {informationGeneralPreview.nombres}
               {informationGeneralPreview.apellidos}
             </h2>
           </section>
 
           <section className="header-bio">
-            <h3 className="">Perfil Profesional</h3>
+            <h3>Perfil Profesional</h3>
             <h4> {informationGeneralPreview.profesion}</h4>
-            <p className="">{informationGeneralPreview.descriptionLaboral}</p>
+            <p>{informationGeneralPreview.descriptionLaboral}</p>
           </section>
 
           <section className="header-contacto">
-            <div className="triangulos" style={{ backgroundColor: colorTexto }}>
+            <div className="header-contacto-titulo" style={{ backgroundColor: colorTexto }}>
               <h4 style={{ color: colorFondo }}>contacto</h4>
             </div>
+            
             <div
-              className="header-contacto-div"
+              className="header-contacto-info"
               style={{ backgroundColor: colorFondo }}
             >
               <div
-                className="header-contacto-div"
+                className="header-contacto-info header-contacto-div"
                 style={{ backgroundColor: colorTexto, color: colorFondo }}
               >
                 <p className="header-contacto-p">
-                  {" "}
-                  {<MdOutlinePhonelinkRing />}{" "}
+                  {<MdOutlinePhonelinkRing />}
                   {informationGeneralPreview.telefono}
                 </p>
                 <p className="header-contacto-p">
@@ -99,59 +98,47 @@ const Preview = ({
           className="preview lateral"
           style={{ backgroundColor: colorTexto, color: colorFondo }}
         >
-           {skillPreview.length !== 0 && (
-                <DatosPreview
-                  titulo="Habilidades"
-                  datos={skillPreview}
-                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
-                />
-              )}
-
-           {idiomaPreview.length !== 0 && (
-                <DatosPreview
-                  titulo="Idioma"
-                  datos={idiomaPreview}
-                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
-                />
-              )}
-              {redesPreview.length !== 0 && (
-                <DatosPreview
-                  titulo="Redes Sociales"
-                  datos={redesPreview}
-                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
-                />
-              )}
-         
+        <InfoDatos
+            titulo={"Idioma"}
+            datos={idiomaPreview}
+            estilos={{ backgroundColor: colorFondo, color: colorTexto }}
+            ubicacion={"lateral"}
+          />
+          <InfoDatos
+            titulo={"Skill"}
+            datos={skillPreview}
+            estilos={{ backgroundColor: colorFondo, color: colorTexto }}
+            ubicacion={"lateral"}
+          />
+           <InfoDatos
+            titulo={"Redes Sociales"}
+            datos={redesPreview}
+            estilos={{ backgroundColor: colorFondo, color: colorTexto }}
+            ubicacion={"lateral"}
+          />
         </aside>
 
-        <main className="main">
-          <section className="main-section">
-            <div className="main-section-div">
-              {educationPreview.length !== 0 && (
-                <DatosPreview
+        <main className="preview">
+            <section className="main-section">
+                <InfoDatos
                   titulo="Educación"
                   datos={educationPreview}
-                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                  estilos={{ backgroundColor: colorTexto, color: colorFondo }}
                 />
-              )}
-
-              {experienciaPreview.length !== 0 && (
-                <DatosPreview
+            
+                <InfoDatos
                   titulo="Experiencia"
                   datos={experienciaPreview}
-                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
+                  estilos={{ backgroundColor: colorTexto, color: colorFondo }}
                 />
-              )}
 
-              {skillPreview.length !== 0 && (
-                <DatosPreview
-                  titulo="Habilidades"
-                  datos={skillPreview}
-                  estilo={{ backgroundColor: colorTexto, color: colorFondo }}
-                />
-              )}
-            </div>
-          </section>
+             
+            <InfoDatos
+            titulo={"Habilidades"}
+            datos={skillPreview}
+            estilos={{ backgroundColor: colorTexto , color: colorFondo  }}
+          />
+            </section>
         </main>
       </section>
     </div>

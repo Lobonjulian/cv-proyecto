@@ -57,6 +57,11 @@ const Configuration = ({ estilosDatosConfig, estilosManejosConfig }) => {
             icono={<RiFontSans />}
             handleClick={() => setFuente("impact")}
           />
+          <BotonIcono
+            nombreBtn={"Verdana"}
+            icono={<RiFontSans />}
+            handleClick={() => setFuente("verdana")}
+          />
         </div>
       </section>
     </div>
